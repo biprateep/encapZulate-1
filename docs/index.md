@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## Photometric Redshifts from SDSS Images with an InterpretableDeep Capsule Network
 
 You can use the [editor on GitHub](https://github.com/biprateep/encapZulate-1/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
 
