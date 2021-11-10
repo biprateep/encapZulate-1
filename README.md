@@ -5,4 +5,5 @@ Documentation, codes and catalogs accompanying our paper, *Photometric Redshifts
 
 
 Website: [biprateep.github.io/encapZulate-1](https://biprateep.github.io/encapZulate-1)
+
 Contact: biprateep@pitt.edu
