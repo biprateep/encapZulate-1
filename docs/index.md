@@ -1,13 +1,14 @@
 ## Photometric Redshifts from SDSS Images with an Interpretable Deep Capsule Network
-by some awesome people
-
+by Biprateep Dey, Brett H. Andrews, Jeffrey A. Newman, Yao-Yuan Mao, Markus Michael Rau, and Rongpu Zhou.
 Type the abstract of the paper here
 
 ### Download Data sets
 
 
 ### Interactive visualizations
-
+- video of the capsule tinkering
+- Bokeh UMAP page
+- 3D UMAP ?
 
 ### Support or Contact
 
