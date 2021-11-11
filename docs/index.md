@@ -6,9 +6,11 @@ Type the abstract of the paper here
 
 
 ### Interactive visualizations
-- video of the capsule tinkering
-- Bokeh UMAP page
-- 3D UMAP ?
+- [video of the capsule tinkering](https://biprateep.de/encapZulate-1/viz/tinker_vid.html)
+- [3D UMAP colored by morphology](https://biprateep.de/encapZulate-1/viz/UMAP_3D_morpho.html)
+- [3D UMAP colored by spectroscopic redshift](https://biprateep.de/encapZulate-1/viz/UMAP_3D_spec_z.html)
+- [3D UMAP colored by photometric redshift](https://biprateep.de/encapZulate-1/viz/UMAP_3D_photo_z.html)
+- [2D UMAP colored by spectroscopic redshift showing postage stamps](https://biprateep.de/encapZulate-1/viz/explore_UMAP.html)
 
 ### Support or Contact
 
