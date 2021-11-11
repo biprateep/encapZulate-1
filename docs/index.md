@@ -14,4 +14,4 @@ Type the abstract of the paper here
 
 ### Support or Contact
 
-Have questions, comments or new ideas? Feel free to contact: biprateep@pitt.edu
+Have questions, comments or new ideas? Feel free to contact: <biprateep@pitt.edu>
