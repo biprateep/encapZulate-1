@@ -20,6 +20,6 @@ Studies of cosmology, galaxy evolution, and astronomical transients with current
 Have questions, comments or new ideas? Feel free to contact: <biprateep@pitt.edu>
 
 ### Funding Acknowledgement
-<img src="https://www.nsf.gov/images/logos/NSF_4-Color_bitmap_Logo.png" alt="NSF Logo" class="center" width=100px height=100px>
+<img src="https://www.nsf.gov/news/mmg/media/images/nsf_logo_f%20(003).jpg" alt="NSF Logo" class="center" width=100px height=100px>
 
 This work was supported by the National Science Foundation under Grant No. **AST-2009251**. Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation.
