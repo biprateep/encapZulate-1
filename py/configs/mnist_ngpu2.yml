@@ -1,0 +1,13 @@
+run_name: mnist_02gpu  # Run name
+model_name: mnist  # Name of the model
+dataset: mnist #Name of the data set
+input_shape: (28,28,1) #tupule showing the (height, width, number of channels)
+num_class: 10 #Number of classes for the classification
+routings: 3 #Number of routing steps for the dynamic routing algorithm
+dim_capsule: 16 #Dimension of the vector space for each capsule
+batch_size: 128 #Batch size for the data ingestion
+epochs: 25 #Number of epochs to run the training
+learning_rate: 0.001 #Initial learning rate
+decay_rate: 0.9 #Decay rate of the learning rate
+lam_recon: 0.0005 #penalty for the summ of square error for the regulariser decoder
+num_gpus: 2 #Number of gpus to use

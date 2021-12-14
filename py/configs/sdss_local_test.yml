@@ -1,0 +1,37 @@
+# Run
+run_name: sdss  # Run name
+num_gpus: 0  # Number of gpus to use
+compile_on: cpu  # Compile model on 'cpu' or 'gpu'
+
+# Data
+path_data: /home/biprateep/Documents/capsNet  # If None, automatically search for the data
+dataset: sdss_unittest_z_0-0.3_bins_136  # Name of the data set
+image_shape: (64, 64,5)  # Image shape (height, width)
+bands: u, g, r, i, z # Bands to use
+num_class: 136  # Number of classes for the classification
+frac_train: 0.9  # fraction of data in training set (remaind in test set)
+random_state: 200  # random seed
+
+# Model
+model_name: deepcaps  # Name of the model
+routings: 3  # Number of routing steps for the dynamic routing algorithm
+dim_capsule: 8  # Dimension of the vector space for each capsule
+batch_size: 32  # Batch size for the data ingestion
+
+# Training 
+epochs: 10  # Number of epochs to run the training
+checkpoint:  # Epoch at which to start training. Use None if starting fresh. 
+learning_rate: 0.001  # Initial learning rate
+decay_rate: 0.9  # Decay rate of the learning rate
+lam_recon: 0.0005  # penalty for the sum of square error for the regulariser decoder
+
+# Output
+timeline: False  # create a TF Timeline
+path_results:   # Output path (recommended: leave empty to auto create directory)
+
+#Evaluation
+z_min: 0
+z_max: 0.3
+dz: 2.2e-3
+outlier_threshold: 0.1
+checkpoint_eval:

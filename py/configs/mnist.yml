@@ -1,0 +1,30 @@
+# Run
+run_name: mnist_01  # Run name
+num_gpus: 2  # Number of gpus to use
+compile_on: gpu  # Compile model on 'cpu' or 'gpu'
+
+# Data
+path_data:  # If None, automatically search for the data
+dataset: mnist  # Name of the data set
+image_shape: (28, 28,1)  # Image shape (height, width)
+num_class: 10  # Number of classes for the classification
+frac_train: 0.8  # fraction of data in training set (remaind in test set)
+random_state: 200  # random seed
+
+# Model
+model_name: mnist  # Name of the model
+routings: 3  # Number of routing steps for the dynamic routing algorithm
+dim_capsule: 16  # Dimension of the vector space for each capsule
+
+batch_size: 2048  # Batch size for the data ingestion
+
+# Training
+epochs: 1  # Final number of epochs to run the training
+checkpoint:   # Epoch at which to start training
+learning_rate: 0.001 #Initial learning rate
+decay_rate: 0.9 #Decay rate of the learning rate
+lam_recon: 0.0005 #penalty for the summ of square error for the regulariser decoder
+
+# Output
+timeline: False  # create a TF Timeline
+path_results:   # Output path

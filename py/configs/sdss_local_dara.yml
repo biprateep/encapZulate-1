@@ -1,0 +1,39 @@
+# Run
+run_name: sdss_0.05-0.1_22_unittest_crps_5_softmax16  # Run name
+num_gpus: 2   # Number of gpus to use
+compile_on: cpu  # Compile model on 'cpu' or 'gpu'
+
+# Data
+path_data: /data/bid13/photoZ/data/pasquet2019 # If None, automatically search for the data
+dataset: sdss_unittest_z_0.1-0.1484_bins_22_frac_0.15  # Name of the data set
+image_shape: (64, 64,5)  # Image shape (height, width)
+bands: u, g, r, i, z # Bands to use
+num_class: 22  # Number of classes for the classification
+frac_train: 0.9  # fraction of data in training set (remaind in test set)
+random_state: 200  # random seed
+
+# Model
+model_name: deepcaps  # Name of the model
+routings: 3  # Number of routing steps for the dynamic routing algorithm
+dim_capsule: 16  # Dimension of the vector space for each capsule
+batch_size: 64  # Batch size for the data ingestion
+
+# Training 
+epochs: 100  # Number of epochs to run the training
+checkpoint: # Epoch at which to start training. Use None if starting fresh. 
+learning_rate: 0.001  # Initial learning rate
+decay_rate: 0.9  # Decay rate of the learning rate
+lam_recon: 0.0005  # penalty for the sum of square error for the regulariser decoder
+
+# Output
+timeline: False  # create a TF Timeline
+path_results:  # Output path (recommended: leave empty to auto create directory)
+
+#Evaluation
+z_min: 0.1
+z_max: 0.1484
+dz: 2.2e-3
+outlier_threshold: 0.05
+checkpoint_eval: 65
+conversion: max #choose from weighted or max conversion from probability to redshifts
+eval_on: train #choose from train or test to select on which dataset to do the metrics

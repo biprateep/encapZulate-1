@@ -1,0 +1,32 @@
+# NOTE: Man model returms masked caps
+# Run
+run_name: colorCaps_gr_4  # Run name
+num_gpus: 2   # Number of gpus to use
+compile_on: cpu  # Compile model on 'cpu' or 'gpu'
+
+# Data
+path_data: /data/bid13/photoZ/data/pasquet2019 # If None, automatically search for the data
+dataset: sdss_gr_20  # Name of the data set
+image_shape: (64, 64, 5)  # Image shape (height, width)
+bands: u, g, r, i, z # Bands to use
+num_class: 20  # Number of classes for the classification
+frac_train: 0.8  # fraction of data in training set (remaind in test set)
+random_state: 200  # random seed
+image_scale: 10 #divide all pixels by this number
+
+# Model
+model_name: colorCaps  # Name of the model
+routings: 3  # Number of routing steps for the dynamic routing algorithm
+dim_capsule: 16  # Dimension of the vector space for each capsule
+batch_size: 256  # Batch size for the data ingestion
+
+# Training 
+epochs: 100  # Number of epochs to run the training
+checkpoint: # Epoch at which to start training. Use None if starting fresh. 
+learning_rate: 0.001  # Initial learning rate
+decay_rate: 0.97  # Decay rate of the learning rate
+lam_recon: 0.005  # penalty for the sum of square error for the regulariser decoder
+
+# Output
+timeline: False  # create a TF Timeline
+path_results:  # Output path (recommended: leave empty to auto create directory)

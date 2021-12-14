@@ -1,0 +1,40 @@
+# NOTE: Man model returms masked caps
+# Run
+run_name: paper1_regression_80perc_HYT0 # Run name
+num_gpus: 2 # Number of gpus to use
+compile_on: gpu # Compile model on 'cpu' or 'gpu'
+
+# Data
+path_data: /data/bid13/photoZ/data/pasquet2019 # If None, automatically search for the data
+dataset: sdss_gz1_final_iter2_Hyt # Name of the data set
+image_shape: (64, 64, 5) # Image shape (height, width)
+bands: u,g, r, i,z # Bands to use
+num_class: 2 # Number of classes for the classification
+frac_train: 0.8 # fraction of data in training set
+frac_dev: 0.1 # fraction in dev set (remaining goes to test)
+random_state: 200 # random seed
+image_scale: 10 #divide all pixels by this number
+use_vals: False # whether to use catalog values
+logistic: True # Whether to use logistic transform for z
+z_max: 0.4 # maximum z for logistic transform
+z_min: 0.0 # minimum z for logistic transform
+
+# Model
+model_name: morphCapsDeep_2 # Name of the model
+routings: 3 # Number of routing steps for the dynamic routing algorithm
+dim_capsule: 16 # Dimension of the vector space for each capsule
+batch_size: 400 # Batch size for the data ingestion
+num_quantiles: False #number of quantiles to use for quantile regression. use mse if 0
+
+# Training
+epochs: 100 # Number of epochs to run the training
+checkpoint: # Epoch at which to start training. Use None if starting fresh.
+learning_rate: 0.0005 # Initial learning rate
+decay_rate: 0.95 # Decay rate of the learning rate
+lam_recon: 0.005 # penalty for the sum of square error for the regulariser decoder
+lam_redshift: 1 # 100 is a good number for mse without logistic
+img_augmentation: 1 #0 for no augmentation, n for n*data_size of augmented data
+
+# Output
+timeline: False # create a TF Timeline
+path_results: # Output path (recommended: leave empty to auto create directory)
